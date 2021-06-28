@@ -64,10 +64,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: "mailto:info@f0rw4rd.xyz"
-    - label: "Email"
-      icon: "fab fa-fw fa-email-square"
-      url: "m"
+      url: "mailto:info@f0rw4rd.xyz"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/f0rw4rd_2"
