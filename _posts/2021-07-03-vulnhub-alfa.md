@@ -41,7 +41,7 @@ Turned out that this is brainfuck code and used this [Page](https://www.tutorial
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/2021-07-03-22-25-00.png)
 
-The code outputted "/alfa-support" and this was much needed hint, my common enumeration wordlists where exhausted at this point. 
+The code outputted "/alfa-support" and this was a much needed hint, because my common enumeration wordlists where exhausted at this point. 
 
 ## 0x02: Exploitation
 
