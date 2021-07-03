@@ -2,7 +2,7 @@
 title: "Writeup: Vulnhub - Alfa"
 date: 2021-07-02T15:34:30-04:00
 categories:
-  - blog
+  - writeup
 tags:
   - vulnhub
   - ctf
