@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/f0rw4rd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.f0rw4rd.xyz
+  * I am f0rw4rd (https://keybase.io/f0rw4rd) on keybase.
+  * I have a public key with fingerprint 8463 A4A8 F649 316D 9669  4EDD F414 F98C 6A0F 90C7
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010107ca689c290f5c8db5edd2c74ba339dd00f0bb81d73e2c66bf3454749c390f2c0a",
+      "fingerprint": "8463a4a8f649316d96694eddf414f98c6a0f90c7",
+      "host": "keybase.io",
+      "key_id": "f414f98c6a0f90c7",
+      "kid": "010107ca689c290f5c8db5edd2c74ba339dd00f0bb81d73e2c66bf3454749c390f2c0a",
+      "uid": "c1cb6fa7f07ee1b9ad46458c14576e19",
+      "username": "f0rw4rd"
+    },
+    "service": {
+      "hostname": "blog.f0rw4rd.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1625388656,
+  "expire_in": 157680000,
+  "prev": "660fa64a6fc47652523c7751c1c138f68e6d43cdab89549d75ae38fc77c96ebf",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUm1QVFUYXhYqPhQtEwhYyFuBGq737v3eMB2kUjT5UlTacbkf5y5Xl7vb3QXE
+dRenMCgRVskVWNRSnJiSkohqUJmcMQMdrCy0ECQY0dQaHGQrLKt7GfzXz875ceY8
+53me87zvOd6ZwZrQoInHJ6s3z/J+FXT+JqspGC5xuiDWxpdBRhe0BUwtwMoDh9O8
+ReQhIwQjyiQ5hqBozkDDAs5RPIsDnjdwJMYyKErzPAwLMMtSCE+iwMARBCugGI6R
+GM2hisLAwQyUAgmiZAGyXRYlp2JLYQTKYAwlEBiNIgRPEwSNKa4ChmACTXEEAws0
+zJGKsNDmUBVKOJZxAL1oUzBlY56K9x/8/zl38ZQdh3AsITCkAJMAICzN8BiB4RSH
+YDhJAIRWiQ4gS0wRUFPBcikm85A7BVLAEpEDal/VQqYJrNVm0U+z9FvLtilyu2xz
+2jibVTktdDrtDqOqdpbZVXopYM3TRmZWlHillYqiBMgO0SZBRkRhck5RdUYIA45S
+FIETKRDYahdlYBZVhpKSgpWh3gNKFEuCgAUTQ2AMIXAYSeAG3IByJIkjSqUIqrwL
+BQgeQzmeYSkax2iexBmg4AqHownACpBa26uSDTIaSCUoY1FMHaJFYpzFMoDc4W9q
+0RBNUKhGFzUvpIJrbvltJVLkE9cMPvh/D2nVz6cJD5v9AAnEzPonzxcch/uTbjYl
+RNX0/n1g5pl7Mbv6qxKphFVtxZ6GQWMtnqOHpNgXWnbS0kBcc7YmEFNRuSC4a8ea
+CLlXd88Huy7VDenn1W5Y12DrP9p8fcNt/8Yfogt+3ZX6AbVpR1pl1e7kI03e4jJT
+VOQ7bVkLzPc9raeqh38a7rjuvVWbtT7Q0fDx4ka8R/v10Mr2yoIvE7PLjv2oKbRc
+AKHIhxMZad8Um1L7PzrbeSXf+vsV81jyPsntMh1MPz0+97gnV3uk2f2L7rnFvsnt
+3LNPcScKT/vPlOv6kM59dwIDOp3r7U5N64k5sRcHmp8JSIfjAvxbe3LqjJ8sHfjz
+ki3x9sVyTu8/vJPdNJm3QhvGnHy6tiUi+9N2T1DrI5Hbc2uOffv9+Zjv4L5lg6Ev
+35IPjTxmic0Ya1xbFS1Je2dUZ0a4ukod81e/LxfgcVo8ffdSh2/Ze54n7matnbPN
+f8Ppqh/P3/PuG2zSIUdN0x/hrXs3B+6uJ03zV1ngwifrNx7MudpunR197f6d0MEV
+NfuTRi/3jMak/7Ww/pyPie/Nzzz6ytjlavfo/iF7erlXD4rCgvO8qx9eHnlhoan7
+xgib+/Nc52sVS5KSU6GXFskdUWzX8ZGR8W738/HxbWKI9dQE9cU1prfv5Odnl3/2
+YsajPWmWhA7fjHOZSZPrXvcvWQRb6ojuxqvoAbrW8y8=
+=r4Fu
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/f0rw4rd
+
+==================================================================
+
