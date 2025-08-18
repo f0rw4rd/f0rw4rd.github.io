@@ -1,5 +1,5 @@
 title: f0rw4rd
-description: ICS Booper | Head of Vulnerability Research @ Limes Security
+description: ICS Booper | OT Pentester
 author: Felix Eberstaller
 tagline: Professional OT Pentester & Security Researcher
 avatar: /assets/img/avatar.jpg
@@ -11,10 +11,11 @@ theme: jekyll-theme-chirpy
 social:
   github: f0rw4rd
   linkedin: felix-eberstaller-3a20251b6
+  rss: true
 
 # Navigation
 tabs:
-  - title: Home
+  - title: Posts
     url: /
   - title: CVEs
     url: /cves/
@@ -26,8 +27,22 @@ markdown: kramdown
 highlighter: rouge
 paginate: 10
 
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
 # Theme mode
 theme_mode: dark  # Forces dark theme as default
+
+# Feed settings
+feed:
+  posts_limit: 20
 
 # SEO
 google_analytics: # Add your GA ID
