@@ -13,3 +13,15 @@ title: Tools & Projects
 
 ---
 {% endfor %}
+
+# Project Contributions
+
+{% for project in site.data.projects %}
+## [{{ project.name }}]({{ project.url }})
+{{ project.description }}
+
+**Role:** {{ project.role }}  
+**Tags:** {% for tag in project.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+
+---
+{% endfor %}
