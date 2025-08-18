@@ -1,0 +1,24 @@
+- name: pyiec61850-ng
+  url: https://github.com/f0rw4rd/pyiec61850-ng
+  description: "Python bindings for IEC 61850 protocol - power systems & industrial automation"
+  tags: ["Python", "IEC 61850", "SCADA", "OT"]
+  
+- name: sthenos-embedded-toolkit
+  url: https://github.com/f0rw4rd/sthenos-embedded-toolkit
+  description: "Build pipeline for static debugging tools across 36 embedded architectures"
+  tags: ["C", "Embedded", "Cross-compilation", "Security"]
+  
+- name: tls-preloader
+  url: https://github.com/f0rw4rd/tls-preloader
+  description: "Bypass TLS certificate verification via LD_PRELOAD (OpenSSL, GnuTLS, NSS, mbedTLS, wolfSSL)"
+  tags: ["C", "TLS", "Security Testing"]
+  
+- name: knxunlocker
+  url: https://github.com/f0rw4rd/knxunlocker
+  description: "Bruteforce locked KNX devices using official KNX SDK"
+  tags: ["C#", "KNX", "Building Automation"]
+  
+- name: unitas
+  url: https://github.com/f0rw4rd/unitas
+  description: "Network scan parser for Nmap/Nessus with markdown report generation"
+  tags: ["Python", "Network Security", "Automation"]

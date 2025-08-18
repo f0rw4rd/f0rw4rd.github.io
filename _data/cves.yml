@@ -1,0 +1,77 @@
+- id: CVE-2025-0417
+  date: 2025-04-01
+  severity: High
+  product: Valmet DNA
+  description: "Lack of brute force protection in DNA Operate visualization"
+  
+- id: CVE-2025-0418
+  date: 2025-04-01
+  severity: Critical
+  product: Valmet DNA
+  description: "User passwords stored in plaintext"
+  
+- id: CVE-2025-0416
+  date: 2025-04-01
+  severity: High
+  product: Valmet DNA
+  description: "Local privilege escalation via insecure DCOM configuration"
+  
+- id: CVE-2024-47092
+  date: 2025-03-03
+  severity: High
+  product: Checkmk Exchange
+  description: "Insecure deserialization and improper certificate validation"
+  
+- id: CVE-2024-52335
+  date: 2024-12-06
+  severity: Critical
+  product: syngo.plaza VB30E
+  description: "SQL injection vulnerability allowing database compromise"
+  
+- id: CVE-2024-35294
+  date: 2024-10-02
+  severity: Critical
+  product: Undisclosed
+  description: "Unauthenticated plaintext credential disclosure via traffic capture"
+  
+- id: CVE-2024-38861
+  date: 2024-08-31
+  severity: Medium
+  product: Checkmk MikroTik Plugin
+  description: "Improper certificate validation allowing MitM attacks"
+  
+- id: CVE-2024-1039
+  date: 2024-02-01
+  severity: Critical
+  product: Gessler GmbH WEB-MASTER
+  description: "Hardcoded credentials in restoration account"
+  
+- id: CVE-2024-1040
+  date: 2024-02-01
+  severity: High
+  product: Gessler GmbH WEB-MASTER
+  description: "Weak password hashing algorithm"
+  
+- id: CVE-2024-35293
+  date: 2024-02-01
+  severity: Critical
+  product: Undisclosed
+  description: "Missing authentication allowing remote reboot/erase"
+  
+- id: CVE-2023-4346
+  date: 2023-08-29
+  severity: High
+  product: KNX Devices
+  description: "BCU key vulnerability allowing device lockout"
+  
+- id: CVE-2022-39062
+  date: 2023-08-08
+  severity: High
+  product: SICAM TOOLBOX II
+  description: "Insecure folder permissions allowing privilege escalation"
+  
+- id: CVE-2021-32958
+  date: 2022-05-23
+  severity: Critical
+  product: Claroty SRA
+  description: "Secret key disclosure allowing session token generation"

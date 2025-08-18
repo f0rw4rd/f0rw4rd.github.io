@@ -1,0 +1,29 @@
+title: f0rw4rd
+description: ICS Booper | Head of Vulnerability Research @ Limes Security
+author: Felix Eberstaller
+tagline: Professional OT Pentester & Security Researcher
+
+# Theme
+theme: jekyll-theme-chirpy
+
+# Contact
+social:
+  github: f0rw4rd
+  linkedin: felix-eberstaller-3a20251b6
+
+# Navigation
+tabs:
+  - title: Home
+    url: /
+  - title: CVEs
+    url: /cves/
+  - title: Tools
+    url: /tools/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+paginate: 10
+
+# SEO
+google_analytics: # Add your GA ID
