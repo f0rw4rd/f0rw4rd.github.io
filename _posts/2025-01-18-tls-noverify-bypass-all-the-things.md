@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "One Weird Trick Certificate Authorities HATE: Bypass Most The Things with LD_PRELOAD"
+title: "Bypass Most The Things with LD_PRELOAD"
 date: 2025-01-18 00:00:00 +0000
 categories: [tools, security-research]
 tags: [tls, ld-preload, pentesting, reverse-engineering]
 ---
-
-## The Problem: Certificate Validation in Security Research
 
 When conducting security research on embedded devices and industrial applications, researchers frequently encounter a common obstacle: TLS certificate validation. Many embedded applications are built using OpenSSL or similar libraries with properly implemented certificate verification. While this is excellent from a security perspective, it presents challenges during legitimate research activities when attempting to analyze network traffic.
 
