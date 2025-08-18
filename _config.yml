@@ -25,5 +25,8 @@ markdown: kramdown
 highlighter: rouge
 paginate: 10
 
+# Theme mode
+theme_mode: dark  # Forces dark theme as default
+
 # SEO
 google_analytics: # Add your GA ID
