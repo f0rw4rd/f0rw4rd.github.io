@@ -1,6 +1,6 @@
 ---
 title: "TLS NoVerify: Bypass All The Things"
-date: 2025-01-18 00:00:00 +0100
+date: 2025-08-18 00:00:00 +0100
 author: f0rw4rd
 categories: [Tools, Security Research]
 tags: [tls, ld-preload, pentesting, reverse-engineering]
