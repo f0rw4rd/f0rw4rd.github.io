@@ -11,9 +11,9 @@ order: 5
 <div class="tools-grid">
 {% for tool in site.data.tools %}
   <div class="tool-card">
-    <h3><a href="{{ tool.github }}" target="_blank" rel="noopener noreferrer">{{ tool.name }}</a></h3>
+    <h3><a href="{{ tool.url }}" target="_blank" rel="noopener noreferrer">{{ tool.name }}</a></h3>
     <p>{{ tool.description }}</p>
-    <p class="tool-language"><i class="fas fa-code"></i> {{ tool.language }}</p>
+    <p class="tool-language"><i class="fas fa-tags"></i> {{ tool.tags | join: ', ' }}</p>
   </div>
 {% endfor %}
 </div>
