@@ -25,8 +25,8 @@ The typical scenario involves receiving `CERTIFICATE_VERIFY_FAILED` errors when 
 
 Traditional approaches to this problem include:
 - **Binary patching** - Requires deep knowledge of the specific TLS library implementation and some time
-- **Dynamic instrumentation (Frida)** - Powerful but requires writing JavaScript hooks for each target application and library, also frida does not like muslc user spaces
-- **Certificate infrastructure setup** - Time-consuming process of creating and some embedded systems have read only CA files 
+- **Dynamic instrumentation (Frida)** - Powerful but requires writing JavaScript hooks for each target application and library, also Frida does not work well with musl libc user spaces
+- **Certificate infrastructure setup** - Time-consuming process of creating CA certificates, and some embedded systems have read-only CA files 
 - **Source code modification** - Only viable when source code is available, which is rarely the case for proprietary applications
 
 ## Solution: Dynamic Library Interposition with LD_PRELOAD
