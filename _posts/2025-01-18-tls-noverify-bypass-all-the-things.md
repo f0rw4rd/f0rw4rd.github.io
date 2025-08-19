@@ -11,6 +11,11 @@ image:
 pin: true
 ---
 
+> **🚀 Get the tool:** [github.com/f0rw4rd/tls-preloader](https://github.com/f0rw4rd/tls-preloader)
+> 
+> A universal TLS certificate bypass tool supporting OpenSSL, GnuTLS, NSS, mbedTLS, and wolfSSL - all with a single LD_PRELOAD!
+{: .prompt-info }
+
 When conducting security research on embedded devices and industrial applications, researchers frequently encounter a common obstacle: TLS certificate validation. Many embedded applications are built using OpenSSL or similar libraries with properly implemented certificate verification. While this is excellent from a security perspective, it presents challenges during legitimate research activities when attempting to analyze network traffic.
 
 ![Raccoon just wants the data](https://i.imgflip.com/a3g3pv.jpg){: w="500" }
@@ -26,7 +31,7 @@ Traditional approaches to this problem include:
 
 ## Solution: Dynamic Library Interposition with LD_PRELOAD
 
-The `tls-preloader` tool provides an elegant solution to this problem by leveraging the `LD_PRELOAD` mechanism available on Linux and Unix systems. This approach allows dynamic interception of library function calls without modifying the target application or its libraries.
+The [**tls-preloader**](https://github.com/f0rw4rd/tls-preloader) tool provides an elegant solution to this problem by leveraging the `LD_PRELOAD` mechanism available on Linux and Unix systems. This approach allows dynamic interception of library function calls without modifying the target application or its libraries.
 
 ### Technical Implementation
 
@@ -100,7 +105,12 @@ TLS_NOVERIFY_BACKTRACE=1 LD_PRELOAD=/tmp/libtlsnoverify.so curl https://expired.
 TLS_NOVERIFY_BACKTRACE=1 LD_PRELOAD=/tmp/libtlsnoverify.so firefox https://badssl.com/dashboard/
 ```
 
-For more examples, check out [tls-preloader](https://github.com/f0rw4rd/tls-preloader).
+## Get Started with tls-preloader
+
+Ready to bypass TLS validation for your security research? Check out the full source code and documentation:
+
+> **[→ github.com/f0rw4rd/tls-preloader](https://github.com/f0rw4rd/tls-preloader)**
+{: .prompt-tip }
 
 ### Case Study: Firefox and BadSSL.com
 
