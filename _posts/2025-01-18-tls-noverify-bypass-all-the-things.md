@@ -1,14 +1,20 @@
 ---
-layout: post
 title: "Bypass Most The Things with LD_PRELOAD"
-date: 2025-01-18 00:00:00 +0000
-categories: [tools, security-research]
+date: 2025-01-18 00:00:00 +0100
+author: f0rw4rd
+categories: [Tools, Security Research]
 tags: [tls, ld-preload, pentesting, reverse-engineering]
+description: "Learn how to bypass TLS certificate validation on Linux using LD_PRELOAD for security research and debugging of embedded systems and native applications"
+image:
+  path: /assets/img/tlsnoverify_badssl.png
+  alt: "BadSSL dashboard showing bypassed certificate validation"
+pin: true
 ---
 
 When conducting security research on embedded devices and industrial applications, researchers frequently encounter a common obstacle: TLS certificate validation. Many embedded applications are built using OpenSSL or similar libraries with properly implemented certificate verification. While this is excellent from a security perspective, it presents challenges during legitimate research activities when attempting to analyze network traffic.
 
-![Raccoon just wants the data](https://i.imgflip.com/a3g3pv.jpg)
+![Raccoon just wants the data](https://i.imgflip.com/a3g3pv.jpg){: w="500" }
+_Just trying to get the data from embedded devices_
 
 The typical scenario involves receiving `CERTIFICATE_VERIFY_FAILED` errors when attempting to intercept and analyze application traffic. This occurs because the application correctly validates the certificate chain and rejects any certificates that don't match its expectations.
 

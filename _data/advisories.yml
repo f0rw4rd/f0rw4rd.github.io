@@ -1,0 +1,11 @@
+- id: E-T-A SEC-2024-1
+  vendor: E-T-A
+  product: E-T-A Product
+  type: Creation of a hidden account possible
+  year: 2024
+
+- id: E-T-A SEC-2024-2  
+  vendor: E-T-A
+  product: E-T-A Product
+  type: Lack of bruteforce protection for the Web UI
+  year: 2024
