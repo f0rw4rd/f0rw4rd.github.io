@@ -1,0 +1,7 @@
+- id: T0892
+  title: Change Credential
+  url: https://attack.mitre.org/techniques/T0892/
+  description: Adversaries may modify software and device credentials to prevent operator and responder access
+  tactic: Inhibit Response Function
+  platforms: ICS devices including PLCs, RTUs, HMIs, and control servers
+  reference: Germany BAS controller incidents - operators locked out via BCU key activation

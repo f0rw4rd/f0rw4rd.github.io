@@ -25,11 +25,30 @@ Below is a list of CVE (Common Vulnerabilities and Exposures) discoveries I've m
 <div class="cve-grid">
 {% for advisory in site.data.advisories %}
   <div class="cve-card">
-    <h3>{{ advisory.id }}</h3>
+    <h3>{% if advisory.link %}<a href="{{ advisory.link }}" target="_blank" rel="noopener noreferrer">{{ advisory.id }}</a>{% else %}{{ advisory.id }}{% endif %}</h3>
     <p><strong>Vendor:</strong> {{ advisory.vendor }}</p>
     <p><strong>Product:</strong> {{ advisory.product }}</p>
     <p><strong>Type:</strong> {{ advisory.type }}</p>
+    {% if advisory.cvss %}<p><strong>CVSS:</strong> {{ advisory.cvss }}</p>{% endif %}
+    {% if advisory.severity %}<p><strong>Severity:</strong> {{ advisory.severity }}</p>{% endif %}
+    {% if advisory.description %}<p><strong>Description:</strong> {{ advisory.description }}</p>{% endif %}
     <p><strong>Year:</strong> {{ advisory.year }}</p>
+  </div>
+{% endfor %}
+</div>
+
+## MITRE ATT&CK Contributions
+
+Contributing to the MITRE ATT&CK framework for ICS by documenting real-world adversary techniques and tactics.
+
+<div class="cve-grid">
+{% for technique in site.data.mitre_attack %}
+  <div class="cve-card">
+    <h3><a href="{{ technique.url }}" target="_blank" rel="noopener noreferrer">{{ technique.id }} - {{ technique.title }}</a></h3>
+    <p><strong>Tactic:</strong> {{ technique.tactic }}</p>
+    <p><strong>Description:</strong> {{ technique.description }}</p>
+    {% if technique.reference %}<p><strong>Reference:</strong> {{ technique.reference }}</p>{% endif %}
+    {% if technique.platforms %}<p><strong>Platforms:</strong> {{ technique.platforms }}</p>{% endif %}
   </div>
 {% endfor %}
 </div>
