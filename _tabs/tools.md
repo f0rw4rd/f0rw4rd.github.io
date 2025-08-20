@@ -4,8 +4,6 @@ icon: fas fa-tools
 order: 5
 ---
 
-# Open Source Security Tools
-
 ## Tools
 
 <div class="tools-grid">
