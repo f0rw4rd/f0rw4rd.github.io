@@ -196,9 +196,7 @@ The BadSSL.com dashboard, which is designed to test certificate validation, show
 
 ## Bonus: Why LD_PRELOAD Doesn't Work on sudo
 
-Ever wondered why you can't just `LD_PRELOAD` sudo? Here's the Linux security model in action:
-
-### Quick Demo with strace
+Ever wondered why you can't just `LD_PRELOAD` sudo? Check this out:
 
 ```bash
 # Try to preload a library with sudo using absolute path
@@ -227,7 +225,7 @@ The key difference: **setuid binaries only search secure system paths** (`/usr/l
 
 ```bash
 sudo cp libtlsnoverify.so /usr/lib/
-sudo chmod u+s /usr/lib/libtlsnoverify.so  # Needs setuid bit! (only needed for LD_PRELOAD and DT_NEEDED)
+sudo chmod u+s /usr/lib/libtlsnoverify.so  # Needs setuid bit! (only needed for LD_PRELOAD and not DT_NEEDED)
 sudo chown root:root /usr/lib/libtlsnoverify.so  # Proper ownership
 ```
 
