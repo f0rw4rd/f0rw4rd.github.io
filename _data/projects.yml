@@ -1,0 +1,8 @@
+- name: OWASP OT Top 10
+  url: https://ot.owasp.org/
+  description: "Contributing to the OWASP OT Top 10 - A comprehensive list of the top 10 security risks in Operational Technology (OT) and Industrial Control Systems (ICS), providing guidance for security professionals to identify and mitigate critical vulnerabilities."
+  role: Contributor
+  tags:
+    - OT Security
+    - OWASP
+    - Industrial Security

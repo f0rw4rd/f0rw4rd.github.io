@@ -1,0 +1,26 @@
+- id: CD_SVA_2025_01
+  vendor: COPA-DATA
+  product: zenon Software Platform
+  type: Missing authentication for critical function (CWE-306)
+  year: 2025
+  description: Remote Transport Service Reboot OS functionality lacks authentication
+  cvss: 7.5
+  link: https://selfservice.copadata.com/portal/en/kb/articles/cd-10-7-2025
+
+- id: E-T-A SEC-2024-2
+  vendor: E-T-A Elektrotechnische Apparate GmbH
+  product: CPC12 (EC-T1/EN-T1/MB-T1/PN-T1)
+  type: Creation of a hidden account possible
+  year: 2024
+  description: Account named 'not_available' is invisible in Web UI and cannot be deleted
+  severity: Medium
+  link: https://www.e-t-a.co.id/fileadmin/user_upload/Ordnerstruktur/Landing-Pages/restricted/Software-Download/ControlPlex/CPC12/SEC-2024-2.pdf
+
+- id: E-T-A SEC-2024-1  
+  vendor: E-T-A Elektrotechnische Apparate GmbH
+  product: CPC12 (EC-T1/EN-T1/MB-T1/PN-T1)
+  type: Lack of bruteforce protection for the Web UI
+  year: 2024
+  description: Unlimited login attempts allowed on Web UI/REST API
+  severity: Medium
+  link: https://www.e-t-a.co.id/fileadmin/user_upload/Ordnerstruktur/Landing-Pages/restricted/Software-Download/ControlPlex/CPC12/SEC-2024-1.pdf
