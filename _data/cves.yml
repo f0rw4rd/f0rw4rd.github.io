@@ -1,77 +1,118 @@
-- id: CVE-2025-0417
-  date: 2025-04-01
-  severity: High
-  product: Valmet DNA
-  description: "Lack of brute force protection in DNA Operate visualization"
-  
+- id: CVE-2025-58127
+  vendor: Checkmk
+  product: Dell Powerscale Plugin
+  type: Improper Certificate Validation
+  year: 2025
+
+- id: CVE-2025-58126
+  vendor: Checkmk
+  product: VMware vSAN Plugin
+  type: Improper Certificate Validation
+  year: 2025
+
+- id: CVE-2025-58125
+  vendor: Checkmk
+  product: Freebox v6 Agent
+  type: Improper Certificate Validation
+  year: 2025
+
+- id: CVE-2025-58124
+  vendor: Checkmk
+  product: check-mk-api Plugin
+  type: Improper Certificate Validation
+  year: 2025
+
+- id: CVE-2025-58123
+  vendor: Checkmk
+  product: BGP Monitoring Plugin
+  type: Improper Certificate Validation
+  year: 2025
+- id: CVE-2025-23403
+  vendor: Siemens
+  product: SIMATIC IPC DiagBase/DiagMonitor
+  type: Insecure registry permissions
+  year: 2025
+
 - id: CVE-2025-0418
-  date: 2025-04-01
-  severity: Critical
+  vendor: Valmet
   product: Valmet DNA
-  description: "User passwords stored in plaintext"
-  
+  type: Plaintext password storage
+  year: 2025
+
+- id: CVE-2025-0417
+  vendor: Valmet
+  product: Valmet DNA
+  type: Lack of brute force protection
+  year: 2025
+
 - id: CVE-2025-0416
-  date: 2025-04-01
-  severity: High
+  vendor: Valmet
   product: Valmet DNA
-  description: "Local privilege escalation via insecure DCOM configuration"
-  
-- id: CVE-2024-47092
-  date: 2025-03-03
-  severity: High
-  product: Checkmk Exchange
-  description: "Insecure deserialization and improper certificate validation"
-  
+  type: Local privilege escalation
+  year: 2025
+
 - id: CVE-2024-52335
-  date: 2024-12-06
-  severity: Critical
+  vendor: Siemens
   product: syngo.plaza VB30E
-  description: "SQL injection vulnerability allowing database compromise"
-  
-- id: CVE-2024-35294
-  date: 2024-10-02
-  severity: Critical
-  product: Undisclosed
-  description: "Unauthenticated plaintext credential disclosure via traffic capture"
-  
+  type: SQL injection
+  year: 2024
+
+- id: CVE-2024-47092
+  vendor: Checkmk
+  product: Checkmk Exchange
+  type: Insecure deserialization
+  year: 2024
+
 - id: CVE-2024-38861
-  date: 2024-08-31
-  severity: Medium
+  vendor: Checkmk
   product: Checkmk MikroTik Plugin
-  description: "Improper certificate validation allowing MitM attacks"
-  
-- id: CVE-2024-1039
-  date: 2024-02-01
-  severity: Critical
-  product: Gessler GmbH WEB-MASTER
-  description: "Hardcoded credentials in restoration account"
-  
-- id: CVE-2024-1040
-  date: 2024-02-01
-  severity: High
-  product: Gessler GmbH WEB-MASTER
-  description: "Weak password hashing algorithm"
-  
+  type: Certificate validation bypass
+  year: 2024
+
+- id: CVE-2024-35294
+  vendor: SCHNEIDER Elektronik GmbH
+  product: Series 700
+  type: Unauthenticated plaintext credential disclosure
+  year: 2024
+
 - id: CVE-2024-35293
-  date: 2024-02-01
-  severity: Critical
-  product: Undisclosed
-  description: "Missing authentication allowing remote reboot/erase"
-  
-- id: CVE-2023-4346
-  date: 2023-08-29
-  severity: High
-  product: KNX Devices
-  description: "BCU key vulnerability allowing device lockout"
-  
-- id: CVE-2022-39062
-  date: 2023-08-08
-  severity: High
+  vendor: SCHNEIDER Elektronik GmbH
+  product: Series 700
+  type: Missing authentication for reboot/erase
+  year: 2024
+
+- id: CVE-2024-1040
+  vendor: Gessler
+  product: Gessler GmbH WEB-MASTER
+  type: Weak password hashing
+  year: 2024
+
+- id: CVE-2024-1039
+  vendor: Gessler
+  product: Gessler GmbH WEB-MASTER
+  type: Hardcoded credentials
+  year: 2024
+
+- id: CVE-2023-38641
+  vendor: Siemens
   product: SICAM TOOLBOX II
-  description: "Insecure folder permissions allowing privilege escalation"
-  
+  type: Database service privilege escalation
+  year: 2023
+
+- id: CVE-2023-4346
+  vendor: KNX
+  product: KNX Devices
+  type: BCU key vulnerability
+  year: 2023
+
+- id: CVE-2022-39062
+  vendor: Siemens
+  product: SICAM TOOLBOX II
+  type: Insecure folder permissions
+  year: 2022
+
 - id: CVE-2021-32958
-  date: 2022-05-23
-  severity: Critical
+  vendor: Claroty
   product: Claroty SRA
-  description: "Secret key disclosure allowing session token generation"
+  type: Secret key disclosure
+  year: 2021
