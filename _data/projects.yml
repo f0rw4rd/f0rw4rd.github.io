@@ -1,0 +1,38 @@
+- name: OWASP OT Top 10
+  url: https://ot.owasp.org/
+  description: "Contributing to the OWASP OT Top 10 - A comprehensive list of the top 10 security risks in Operational Technology (OT) and Industrial Control Systems (ICS), providing guidance for security professionals to identify and mitigate critical vulnerabilities."
+  role: Contributor
+  tags:
+    - OT Security
+    - OWASP
+    - Industrial Security
+
+- name: nmap
+  url: https://nmap.org/changelog.html#7.95
+  description: "Contributed KNX packet size testing fixes and industrial control system scripts to Nmap 7.95, including fixes for packet size testing in KNX scripts (GH#2727, GH#2728) as part of DINA community ICS/OT initiatives"
+  role: Contributor
+  tags:
+    - NSE
+    - KNX
+    - ICS
+    - Open Source
+
+- name: Awesome Industrial Protocols
+  url: https://github.com/Orange-Cyberdefense/awesome-industrial-protocols
+  description: "Contributing to a security-oriented compilation of industrial network protocol resources"
+  role: Contributor
+  tags:
+    - Industrial Protocols
+    - ICS/OT Security
+    - Open Source
+    - Documentation
+
+- name: clone-cert
+  url: https://github.com/SySS-Research/clone-cert
+  description: "Contributed fixes for EC certificate detection and Authority Key Identifier handling to this TLS certificate cloning tool used for security testing"
+  role: Contributor
+  tags:
+    - TLS
+    - Security Testing
+    - Open Source
+    - Python
