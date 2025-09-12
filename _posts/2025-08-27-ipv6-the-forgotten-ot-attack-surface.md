@@ -13,6 +13,23 @@ You might wonder if I'm being serious with this post. In OT where sometimes IP s
 
 The security implications? An unmanaged attack surface with exposed services, dual-stack configs that enable DoS attacks via DHCPv6, and potentially vulnerable IPv6 stacks waiting to be exploited. 
 
+## TL;DR
+
+**The Problem**: IPv6 is enabled by default on modern systems, creating an unmanaged attack surface in your OT network. 
+
+**Quick Detection**: 
+- `ping -6 -I eth0 ff02::1` - Find all IPv6 devices on segment or  `sudo nmap -6 --script ipv6-multicast-mld-list` - Multicast discovery
+- `tcpdump -i eth0 -n ip6` - Monitor IPv6 traffic passively
+- `atk6-alive6 eth0` - THC-IPv6 active scanning
+
+**Impact**:
+- Exposed IPv6 stack to the network which can contain vulnerabilities like - CVE-2024-38063: Windows IPv6 stack RCE
+- IPv6 priority means attackers control routing decisions
+- MITM without triggering ARP detection 
+
+
+**Fix**: Disable IPv6 if not using it. Most OT doesn't need it. CIS Hardening Benchmarks recommend disabling entirely.
+
 ## The Dual-Stack Default Dilemma
 
 Here's what most OT engineers overlook: **virtually every modern system runs dual-stack by default**. Your Windows Server 2019 SCADA host? IPv6 enabled. That Linux-based HMI? IPv6 enabled. Even on some modern PLCs. 
@@ -160,14 +177,18 @@ dnsrecon -d company.local -t std,rvl,srv
 
 ### Windows RPC Enumeration
 
-On Windows systems with RPC access, you can enumerate IPv6 addresses:
+On Windows systems with RPC access and no credentials (tested with Windows 10) and the IPv4, you can get non-SLAAC IPv6 addresses with Impacket by using the _ServerAlive2_ RPC method. Source: https://github.com/mubix/IOXIDResolver
 
 ```bash
-# Using rpcclient to enumerate network interfaces
-rpcclient -U 'DOMAIN\user%password' $TARGET_IP -c 'netsharegetinfo'
+# pip install impacket
+python3 -c "from impacket.dcerpc.v5 import transport,dcomrt;t=transport.DCERPCTransportFactory('ncacn_ip_tcp:169.254.167.172').get_dce_rpc();t.connect();print([b['aNetworkAddr'] for b in dcomrt.IObjectExporter(t).ServerAlive2()])"
+['DESKTOP-RACCOONS-AT-WORK\x00', '169.254.167.172\x00', '169.254.152.128\x00', 'dead:beef:f01d:af01:daf0:1daf:1da:f01d\x00']
+```
 
-# Or use WMI queries for network adapter configuration  
-wmic /node:$TARGET_IP nicconfig get ipaddress
+If you have credentials, you can use WMI or tools like CME/NXC to go for SMB/RPC for example. 
+
+```bash
+ nxc smb 169.254.167.172 -u user -p password --interfaces # thx @Sixtus for the feedback!
 ```
 
 ### Scanning via Multicast
@@ -184,8 +205,11 @@ When you don't have specific targets, multicast addresses let you discover all I
 
 For a complete list, see [IANA IPv6 Multicast Addresses](https://www.iana.org/assignments/ipv6-multicast-addresses/).
 
+
+
 ```bash
 # Best discovery method - tries multiple multicast addresses
+# use -e to the set interface
 sudo nmap -6 --script ipv6-multicast-mld-list
 
 # Ping all nodes and extract unique IPs
@@ -220,6 +244,27 @@ sudo atk6-node_query6 eth0 fe80::1
 # Scan for IPv6 node information with nmap
 sudo nmap -6 --script ipv6-node-info.nse -n --packet-trace fe80::854f:891c:a724:fad6
 ```
+
+Example with nmap: 
+
+```bash
+sudo nmap -6 --script ipv6-multicast-mld-list -e enp0s9
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-09-12 16:15 +0200
+Pre-scan script results:
+| ipv6-multicast-mld-list: 
+|   fe80::9fcb:ca:43b0:c1ab: 
+|     device: enp0s9
+|     mac: 08:00:27:6a:66:0c
+|     multicast_ips: 
+|       ff02::1:ffb0:c1ab         (NDP Solicited-node)
+|       ff02::1:3                 (Link-local Multicast Name Resolution)
+|       ff02::fb                  (mDNSv6)
+|_      ff02::c                   (SSDP)
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 10.22 seconds
+```
+
+![IPv6 Multicast Network Capture](/assets/img/ipv6-multicast-capture.png)
 
 ### Targeted Scanning from Known Information
 
@@ -358,7 +403,7 @@ ssh user@jumphost -L "5002:[2001:db8::1]:502"
 ## Defense against IPv6
 
 The best defense against IPv6 attacks in OT? Disable IPv6 if you're not using it. However, Microsoft does not recommend disabling it for Windows without proper consideration, because some features will no longer work.
-According to Microsoft (https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-ipv6-in-windows), these features break:
+According to [Microsoft documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-ipv6-in-windows), these features break:
 * HomeGroup (file sharing)
 * DirectAccess (remote access)
 * Remote Assistance
@@ -393,7 +438,7 @@ New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameter
 ### Linux Configuration
 
 ```bash
-# Prefer IPv4 over IPv6 (without disabling IPv6)
+# Option 1: Prefer IPv4 over IPv6 (without disabling IPv6)
 echo "precedence ::ffff:0:0/96 100" >> /etc/gai.conf
 
 # Alternative: Modify preference via sysctl
@@ -402,7 +447,7 @@ echo "net.ipv6.conf.default.disable_ipv6 = 0" >> /etc/sysctl.conf
 echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 echo "net.ipv6.conf.all.forwarding = 0" >> /etc/sysctl.conf
 
-# Using nftables 
+# Option 2: Block IPv6 at the firewall (using nftables)
 nft add table ip6 filter
 nft add chain ip6 filter input { type filter hook input priority 0 \; policy drop \; }
 nft add chain ip6 filter forward { type filter hook forward priority 0 \; policy drop \; }
@@ -410,7 +455,8 @@ nft add chain ip6 filter output { type filter hook output priority 0 \; policy d
 nft add rule ip6 filter input iif lo accept
 nft add rule ip6 filter output oif lo accept
 
-# Disable IPv6 completely
+# Option 3: Disable IPv6 completely
+# Temporary disable
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 
