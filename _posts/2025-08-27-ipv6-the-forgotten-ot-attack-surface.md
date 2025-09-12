@@ -13,22 +13,19 @@ You might wonder if I'm being serious with this post. In OT where sometimes IP s
 
 The security implications? An unmanaged attack surface with exposed services, dual-stack configs that enable DoS attacks via DHCPv6, and potentially vulnerable IPv6 stacks waiting to be exploited. 
 
-## TL;DR
-
-**The Problem**: IPv6 is enabled by default on modern systems, creating an unmanaged attack surface in your OT network. 
-
-**Quick Detection**: 
-- `ping -6 -I eth0 ff02::1` - Find all IPv6 devices on segment or  `sudo nmap -6 --script ipv6-multicast-mld-list` - Multicast discovery
-- `tcpdump -i eth0 -n ip6` - Monitor IPv6 traffic passively
-- `atk6-alive6 eth0` - THC-IPv6 active scanning
-
-**Impact**:
-- Exposed IPv6 stack to the network which can contain vulnerabilities like - CVE-2024-38063: Windows IPv6 stack RCE
-- IPv6 priority means attackers control routing decisions
-- MITM without triggering ARP detection 
-
-
-**Fix**: Disable IPv6 if not using it. Most OT doesn't need it. CIS Hardening Benchmarks recommend disabling entirely.
+> **TL;DR:** IPv6 is enabled by default on modern systems, creating an unmanaged attack surface in your OT network.
+> 
+> **Detection:**
+> ```bash
+> ping -6 -I eth0 ff02::1              # Find all IPv6 devices on segment
+> nmap -6 --script ipv6-multicast-mld-list  # Multicast discovery
+> tcpdump -i eth0 -n ip6               # Monitor IPv6 traffic passively
+> atk6-alive6 eth0                     # THC-IPv6 active scanning
+> ```
+> 
+> **Impact:** IPv6 stack vulnerabilities (CVE-2024-38063), attackers control routing via IPv6 priority, MITM without triggering ARP detection.
+> 
+> **Fix:** Disable IPv6 if not using it. CIS Benchmarks recommend it.
 
 ## The Dual-Stack Default Dilemma
 
