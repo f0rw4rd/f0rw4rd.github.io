@@ -27,6 +27,13 @@
   product: BGP Monitoring Plugin
   type: Improper Certificate Validation
   year: 2025
+
+- id: CVE-2025-40896
+  vendor: Nozomi Networks
+  product: Arc
+  type: Improper Certificate Validation
+  year: 2025
+
 - id: CVE-2025-23403
   vendor: Siemens
   product: SIMATIC IPC DiagBase/DiagMonitor
@@ -49,6 +56,36 @@
   vendor: Valmet
   product: Valmet DNA
   type: Local privilege escalation
+  year: 2025
+
+- id: CVE-2024-32014
+  vendor: Siemens
+  product: Spectrum Power 4
+  type: Local database alteration
+  year: 2025
+
+- id: CVE-2024-32011
+  vendor: Siemens
+  product: Spectrum Power 4
+  type: Remote command execution
+  year: 2025
+
+- id: CVE-2024-32010
+  vendor: Siemens
+  product: Spectrum Power 4
+  type: Database credential file disclosure
+  year: 2025
+
+- id: CVE-2024-32009
+  vendor: Siemens
+  product: Spectrum Power 4
+  type: Local privilege escalation (binary permissions)
+  year: 2025
+
+- id: CVE-2024-32008
+  vendor: Siemens
+  product: Spectrum Power 4
+  type: Local privilege escalation (exposed debug interface)
   year: 2025
 
 - id: CVE-2024-52335
