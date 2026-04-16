@@ -12,7 +12,7 @@ I'm interested in exchanging knowledge with fellow security researchers working 
 - Development of open-source security tools
 - Novel attack vectors in critical infrastructure
 
-To discuss **public research** or anything else, feel free to reach out via LinkedIn or any of my social accounts. 
+To discuss **public research** or anything else, feel free to reach out via any of my social accounts. 
 
 ## Disclaimer
 
