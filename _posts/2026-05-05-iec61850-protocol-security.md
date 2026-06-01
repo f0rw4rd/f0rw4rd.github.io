@@ -1,6 +1,6 @@
 ---
 title: "IEC 61850: A Security Primer for Substation Protocols"
-date: 2026-04-16 14:00:00 +0100
+date: 2026-05-05 14:00:00 +0100
 categories: [ICS Security, Protocols]
 tags: [iec61850, goose, mms, substation, energy, protocol-analysis]
 description: "What MMS, GOOSE, and SV actually do inside a substation, and how to poke them from Python with pyiec61850-ng."
