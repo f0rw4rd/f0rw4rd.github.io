@@ -9,3 +9,5 @@ Gemfile.lock
 vendor/
 .bundle/
 squash-history.sh
+.vscode/
+examples/
